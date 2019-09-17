@@ -1,0 +1,41 @@
+.side {
+  color: #ffffff;
+  float: left;
+  font-weight: bold;
+  &__header {
+    background-color: #253141;
+    width: 300px;
+    height: 100px;
+    line-height: 16px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    &__icon {
+      float: right;
+      color: #ffffff;
+      &__new-group {
+        padding-right: 5px;
+      }
+      &__edit-acount{ 
+      }
+    }
+  }
+  &__content {
+    background-color: #2f3e51;
+    width: 300px;
+    height: calc(100vh - 100px);
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: scroll;
+    &__group--name {
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+    &__group--message {
+      margin-bottom: 40px;
+      font-size: 11px;
+    }
+  }
+}
