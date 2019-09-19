@@ -1,0 +1,113 @@
+.main {
+  float: left;
+  &__header {
+    width: calc(100vw - 300px);
+    height: 100px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: solid 1px #eeeeee;
+    &__group {
+      float: left;
+      &--name {
+        font-size: 20px;
+        color: #333333;
+        padding-top: 35px;
+        box-sizing: border-box;
+      }
+      &--member {
+        font-size: 12px;
+        color: #999999;
+        padding-top: 15px;
+        box-sizing: border-box; 
+      }
+    }
+    &__button {
+      float: right;
+      height: 40px;
+      color: #38aef0;
+      margin-top: 28px;
+      padding: 0 20px;
+      box-sizing: border-box;
+      border: solid 1px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+  }
+  &__content {
+    width: calc(100vw - 300px);
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+    padding: 46px 40px 0;
+    box-sizing: border-box;
+    overflow: scroll;
+    &__message {
+      &__user-name {
+        float: left;
+        font-weight: bold;
+        color: #434A54;
+        margin-right: 10px;
+      }
+      &__post-day {
+        font-size: 12px;
+        color: #999999;
+      }
+      &__text {
+        clear: both;
+        font-size: 14px;
+        color: #434A54;
+        margin: 10px 0 40px 0;
+      }
+    }
+  }
+  &__form {
+    width: calc(100vw - 300px);
+    height: 90px;
+    background-color: lightgray;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    &__create {
+      height: 50px;
+      width: calc(100vw - 300px - 80px);
+      display: flex;
+      &__box {
+        height: 50px;
+        width: calc(100% - 100px);
+        background-color: #ffffff;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          color: #434A54;
+          padding: 0 40px 0 10px;
+          box-sizing: border-box;
+          line-height: 50px;
+          border: none;
+        }
+        &--icon {
+          line-height: 50px;
+          position: absolute;
+          right: 10px;
+          top: 1px;
+          font-size: 1.3rem;
+          cursor: pointer;
+          display: inline-block;
+        }
+      }
+      &--submit {
+        float: right;
+        background-color: #38aef0;
+        width: 100px;
+        height: 50px;
+        color: #ffffff;
+        line-height: 50px;
+        text-align: center;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+    }
+    .hidden-form {
+      display: none;
+    }
+  }
+}
