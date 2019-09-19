@@ -1,55 +1,40 @@
-.contents
-  .side
-    .side__header
-      = current_user.name
-      =link_to edit_user_path(current_user), class: "side__header__icon" do
-        = fa_icon 'cog', class: "side__header__icon__edit-acount"
-      =link_to new_group_path, class: "side__header__icon" do
-        = fa_icon 'edit', class: "side__header__icon__new-group"
-    .side__content
-      .side__content__group
-        .side__content__group--name group1
-        .side__content__group--message おはよう
-        .side__content__group--name group2
-        .side__content__group--message こんにちは
-        .side__content__group--name group3
-        .side__content__group--message おやすみなさい
-  .main
-    .main__header
-      .main__header__group
-        .main__header__group--name group1
-        .main__header__group--member Member : 佐藤 すずき takahashi タナカ 伊藤 ワタナベ 山本
-      =link_to "https://chat-space-sample.herokuapp.com/", class: "main__header__button" do
-        Edit
-    .main__content
-      .main__content__message
-        .main__content__message__user-name 佐藤
-        .main__content__message__post-day 2019-09-15-(Sun) 12:00:00
-        .main__content__message__text こんにちは
-        .main__content__message__user-name すずき
-        .main__content__message__post-day 2019-09-15-(Sun) 14:00:00
-        .main__content__message__text おはよう
-        .main__content__message__user-name takahshi
-        .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
-        .main__content__message__text おやすみ
-        .main__content__message__user-name タナカ
-        .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
-        .main__content__message__text おやすみ
-        .main__content__message__user-name 伊藤
-        .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
-        .main__content__message__text おやすみ
-        .main__content__message__user-name ワタナベ
-        .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
-        .main__content__message__text おやすみいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
-        .main__content__message__user-name 山本
-        .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
-        .main__content__message__text おやすみ
-        
-    .main__form
-      %form.main__form__create
-        .main__form__create__box
-          %input.main__form__create__box__text{placeholder: "type a message"}/
-          %label{for: "image-form"}
-            %input.hidden-form{type: "file", id: "image-form"}/
-            = fa_icon 'image', class: "main__form__create__box--icon"
-        %input.main__form__create--submit{type: "submit", value: "Send"}
+= render 'side_bar'
+.main
+  .main__header
+    .main__header__group
+      .main__header__group--name group1
+      .main__header__group--member Member : 佐藤 すずき takahashi タナカ 伊藤 ワタナベ 山本
+    =link_to "https://chat-space-sample.herokuapp.com/", class: "main__header__button" do
+      Edit
+  .main__content
+    .main__content__message
+      .main__content__message__user-name 佐藤
+      .main__content__message__post-day 2019-09-15-(Sun) 12:00:00
+      .main__content__message__text こんにちは
+      .main__content__message__user-name すずき
+      .main__content__message__post-day 2019-09-15-(Sun) 14:00:00
+      .main__content__message__text おはよう
+      .main__content__message__user-name takahshi
+      .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
+      .main__content__message__text おやすみ
+      .main__content__message__user-name タナカ
+      .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
+      .main__content__message__text おやすみ
+      .main__content__message__user-name 伊藤
+      .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
+      .main__content__message__text おやすみ
+      .main__content__message__user-name ワタナベ
+      .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
+      .main__content__message__text おやすみいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい
+      .main__content__message__user-name 山本
+      .main__content__message__post-day 2019-09-15-(Sun) 21:00:00
+      .main__content__message__text おやすみ
+      
+  .main__form
+    %form.main__form__create
+      .main__form__create__box
+        %input.main__form__create__box__text{placeholder: "type a message"}/
+        %label{for: "image-form"}
+          %input.hidden-form{type: "file", id: "image-form"}/
+          = fa_icon 'image', class: "main__form__create__box--icon"
+      %input.main__form__create--submit{type: "submit", value: "Send"}
