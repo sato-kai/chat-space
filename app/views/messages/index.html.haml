@@ -4,8 +4,10 @@
     .main__header__group
       .main__header__group--name
         = @group.name
-      .main__header__group--member
-        = "Member : #{@group.user_ids.map { |id| User.find(id).name }}"
+      .main__header__group--member 
+        Member :
+        - @group.users.each do |user|
+          = user.name
     =link_to "https://chat-space-sample.herokuapp.com/", class: "main__header__button" do
       Edit
   .main__content
@@ -19,11 +21,3 @@
           = f.file_field :image, class: 'hidden-form'
           = fa_icon 'image', class: "main__form__create__box--icon"
       = f.submit 'Send', class: 'main__form__create--submit'
-
-
-
--# side__content__group
--#       - current_user.groups.each do |group|
--#         = link_to group_messages_path(group) do
--#           .side__content__group--name
--#             = group.name
