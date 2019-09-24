@@ -34,7 +34,7 @@ $(function(){
       var html = buildMessage(message);
       $('.main__content').append(html);
       $('.main__content').animate({ scrollTop: $('.main__content')[0].scrollHeight });
-      $('#form')[0].reset();
+      $('form')[0].reset();
       $('.main__form__create--submit').attr('disabled', false);
     })
     .fail(function(){
