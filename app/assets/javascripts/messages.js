@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', function() {
                     ${message.date}
                   </div>
                   <p class="main__content__message__text">
-                    ${message.content}
+                    ${content}
                   </p>
                   <img src="${image}">
                 </div>`
